@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useNavigate } from "react-router-dom";
-import home from "./Home";
 import axios from 'axios';
 function Loginpage()
 {
@@ -29,6 +28,9 @@ function Loginpage()
             alert("รหัสผิด")
         }
     };
+    const movetosignup = () =>{
+        navigate('/signup');
+    }
     return(
         <div align="center">
                 <div>
@@ -43,7 +45,7 @@ function Loginpage()
                 <input type="submit" value="LOGIN"onClick={checkUser}/>
                 </div>
                 <div>
-                    <input type="submit" value="Sing up" />
+                    <input type="submit" value="Sign up" onClick={movetosignup}/>
                 </div>
         </div>
     );
