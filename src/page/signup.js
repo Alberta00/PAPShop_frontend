@@ -5,7 +5,7 @@ import '../pagecss/signup.css';
 function Signuppage()
 {
     const navigate = useNavigate()
-    const url="http://127.0.0.1:5000"
+    const url="http://10.64.43.33:5000"
     const [Username,setusername] =useState("")
     const [Password,setpassword] =useState("")
     const [Email,setemail] =useState("")
