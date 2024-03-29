@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import '../pagecss/signup.css';
 function Signuppage()
 {
     const navigate = useNavigate()
@@ -8,7 +9,6 @@ function Signuppage()
     const [Username,setusername] =useState("")
     const [Password,setpassword] =useState("")
     const [Email,setemail] =useState("")
-    const [ID,setid] =useState("")
     const [login,setlogin] = useState(false)
     const inputusername =(event) =>{
         setusername(event.target.value)
@@ -19,13 +19,9 @@ function Signuppage()
     const inputemail =(event) =>{
         setemail(event.target.value)
     }
-    const inputid =(event) =>{
-        setid(event.target.value)
-    }
     const signupdata = () => {
         const datauser = {
-            _id : ID,
-            username : Username,
+            _id : Username,
             password : Password,
             email : Email
         }
@@ -40,25 +36,30 @@ function Signuppage()
             }})
     }
     return(
-        <div align="center">
-                <div>
-                    <label>ID</label>
-                    <input type="text" onChange={inputid}/>
+        <div align="center" id="main">
+                <div id="headsignup">
+                    <label>Sign in</label>
                 </div>
                 <div>
-                    <label>Email</label>
-                    <input type="text" onChange={inputemail}/>
+                    <div>
+                        <label>Email</label>
+                    </div>
+                    <input className="signup" type="text" onChange={inputemail}/>
                 </div>
                 <div>
-                    <label>Username</label>
-                    <input type="text" onChange={inputusername}/>
+                    <div>
+                        <label>Username</label>
+                    </div>
+                    <input className="signup" type="text" onChange={inputusername}/>
                 </div>
                 <div>
-                    <label>Password</label>
-                    <input type="text" onChange={inputpassword}/>
+                    <div>
+                        <label>Password</label>
+                    </div>
+                    <input className="signup" type="text" onChange={inputpassword}/>
                 </div>
                 <div>
-                    <input type="submit" value="Sign up" onClick={signupdata}/>
+                    <input className="signup" type="submit" value="Submit" onClick={signupdata}/>
                 </div>
         </div>
     )

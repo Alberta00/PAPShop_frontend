@@ -1,0 +1,15 @@
+.signup{
+    padding: 10px;
+    border: 1px solid ;
+    border-radius: 60px;
+    background-color: #D9D9D9;
+}
+#headsignup{
+    height: 25px;
+    width: 175px;
+    padding: 10px;
+    border: 1px solid ;
+    border-radius: 60px;
+    background-color: #D9D9D9;
+    font-size: large;
+}

@@ -1,0 +1,30 @@
+input{
+    padding: 10px;
+    border: 1px solid ;
+    border-radius: 60px;
+    background-color: #919672;
+}
+div{
+    padding: 5px;
+}
+label{
+    margin-right: 100px;
+    padding: 10px;
+
+}
+#main{
+    padding: 5px;
+    margin-top: 15%;
+}
+#login{
+    padding: 20px;
+    border: 1px solid ;
+    border-radius: 60px;
+    background-color: #B56969;
+}
+#signup{
+    padding: 5px;
+    border: 1px solid ;
+    border-radius: 60px;
+    background-color: white;
+}

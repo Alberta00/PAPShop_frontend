@@ -1,6 +1,7 @@
 import {  useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import '../pagecss/loginpage.css';
 function Loginpage()
 {
     const navigate = useNavigate()
@@ -32,20 +33,24 @@ function Loginpage()
         navigate('/signup');
     }
     return(
-        <div align="center">
+        <div  id="main" align="center">
                 <div>
+                    <div>
                     <label>Username</label>
+                    </div>
                     <input type="text" onChange={inputusername}/>
                 </div>
                 <div>
+                    <div>
                     <label>Password</label>
+                    </div>
                     <input type="text" onChange={inputpassword}/>
                 </div>
                 <div>
-                <input type="submit" value="LOGIN"onClick={checkUser}/>
+                <input id="login" type="submit" value="LOGIN"onClick={checkUser}/>
                 </div>
                 <div>
-                    <input type="submit" value="Sign up" onClick={movetosignup}/>
+                    <input id="signup" type="submit" value="Sign up" onClick={movetosignup}/>
                 </div>
         </div>
     );
